@@ -1,11 +1,11 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Arial', sans-serif;
 }
 
-.hero{
+.hero {
     height: 100vh;
     width: 100%;
     position: relative;
@@ -15,7 +15,7 @@
     overflow: hidden;
 }
 
-.video-background{
+.video-background {
     position: absolute;
     top: 0;
     left: 0;
@@ -25,7 +25,8 @@
     z-index: -1;
 }
 
-nav{
+
+nav {
     position: absolute;
     top: 0;
     left: 0;
@@ -37,33 +38,34 @@ nav{
     z-index: 2;
 }
 
-nav .logo{
+nav .logo {
     width: 80px;
 }
 
-nav ul{
+nav ul {
     display: flex;
     gap: 30px;
 }
 
-nav ul li{
+nav ul li {
     list-style: none;
 }
 
-nav ul li a{
+nav ul li a {
     text-decoration: none;
     color: #fff;
     font-size: 17px;
 }
 
-.content{
+
+.content {
     display: flex;
     flex-direction: column;
     text-align: center;
     z-index: 1;
 }
 
-.content h1{
+.content h1 {
     color: #fff;
     font-size: 70px;
     font-weight: 600;
@@ -74,7 +76,7 @@ nav ul li a{
     cursor: pointer;
 }
 
-.content a{
+.content a {
     display: inline-block;
     margin-top: 20px;
     padding: 14px 70px;
@@ -86,17 +88,21 @@ nav ul li a{
     transition: all 0.3s ease;
 }
 
-.content a:hover{
+.content a:hover {
     background: #fff;
     color: #000;
     transform: translateY(-3px);
     box-shadow: 0 10px 20px rgba(0,0,0,0.2);
 }
-/*.about-section{
+
+/*
+.about-section {
     background:#f5f5f5;
     padding:40px 0 30px;
-}*/
-.about-comment{
+}
+*/
+
+.about-comment {
     text-align: center;
     font-size: 22px;
     color: #222;
@@ -106,7 +112,8 @@ nav ul li a{
     position: relative;
     font-weight: 500;
 }
-.about-comment::after{
+
+.about-comment::after {
     content: "";
     width: 60px;
     height: 2px;
@@ -115,12 +122,13 @@ nav ul li a{
     margin: 8px auto 0;
 }
 
-.photo-section{
+
+.photo-section {
     padding: 25px 10% 80px;
     background: #f5f5f5;
 }
 
-.photo-container{
+.photo-container {
     max-width: 1200px;
     margin: 0 auto;
     display: flex;
@@ -128,14 +136,14 @@ nav ul li a{
     gap: 50px;
 }
 
-.photo-box{
+.photo-box {
     display: flex;
     flex-direction: row;
     gap: 40px;
     align-items: flex-start;
 }
 
-.photo-box img{
+.photo-box img {
     width: 100%;
     max-width: 600px;
     border-radius: 15px;
@@ -145,33 +153,35 @@ nav ul li a{
     box-shadow: 0 20px 50px rgba(0,0,0,0.2);
 }
 
-.text-box{
+
+.text-box {
     flex: 1;
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
 
-.text-box h2{
+.text-box h2 {
     font-size: 40px;
     margin: 0;
     color: #222;
 }
 
-.text-box p{
+.text-box p {
     font-size: 18px;
     line-height: 1.8;
     color: #444;
-    margin:0;
+    margin: 0;
 }
 
-.text-box h3{
+.text-box h3 {
     font-size: 22px;
     margin: 0;
     color: #222;
 }
 
-.hotel-btn{
+
+.hotel-btn {
     display: inline-block;
     padding: 12px 40px;
     border: 2px solid #000;
@@ -181,28 +191,133 @@ nav ul li a{
     transition: all 0.3s ease;
 }
 
-.hotel-btn:hover{
+.hotel-btn:hover {
     background: #000;
     color: #fff;
 }
 
-@media (max-width: 768px){
-    .content h1{
+
+.hotels-section {
+    padding: 50px;
+    background: #fff;
+}
+
+.hotels-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    padding: 20px;
+}
+
+.hotel-card {
+    flex: 1 1 calc(33.33% - 30px);
+    background-color: #f5f5f5;
+    border-radius: 15px;
+    overflow: hidden;
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hotel-card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+}
+
+.hotel-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 25px rgba(0,0,0,0.2);
+}
+
+.hotel-info {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.hotel-info p {
+    font-size: 14px;
+    color: #555;
+}
+
+.hotel-info .rating {
+    font-size: 14px;
+    color: #f5b50a;
+}
+
+.hotel-info .rating .star {
+    margin-right: 2px;
+}
+
+
+.rating {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.star {
+    color: gold;
+    font-size: 16px;
+    text-align: center;
+}
+
+.vistors {
+    font-size: 13px;
+    color: #666;
+    margin-left: 6px;
+}
+
+
+@media (max-width: 768px) {
+    .content h1 {
         font-size: 48px;
     }
 
-    .content a{
+    .content a {
         font-size: 20px;
         padding: 12px 50px;
     }
 
-    .photo-container{
+    .photo-container {
         flex-direction: column;
         text-align: center;
     }
 
-    .photo-box img{
+    .photo-box img {
         max-width: 100%;
+    }
+
+    .hotel-card {
+        width: 90%;
+    }
+}
+
+@media (max-width: 992px) {
+    .hotel-card {
+        flex: 1 1 calc(45% - 30px);
+    }
+}
+
+@media (max-width: 768px) {
+    .hotel-card {
+        flex: 1 1 90%;
+    }
+}
+@media(max-width: 992){
+    .hotels-container{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media(max-width: 768px){
+    .hotels-container{
+        grid-template-columns: 1fr;
     }
 }
 
